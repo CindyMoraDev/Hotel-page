@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hotel El Cerro | Contactenos </title>
+</head>
+
+<body>
+
+    <!-- ====================================
+   NAVBAR
+===================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ps-4 navegacion">
+        <div class="container-fluid">
+            <a href="home.html " class="navbar-brand text-light">
+                <img src="img/logo.jpg " height="75" alt="Logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto navegacion-links">
+                    <a href="habitaciones.html" class="nav-item nav-link active text-light fs-3 fw-bold">Habitaciones</a>
+                    <a href="spa.html " class="nav-item nav-link text-light fs-3 fw-bold">Spa</a>
+                    <a href="paquetes.html " class="nav-item nav-link text-light fs-3 fw-bold">Paquetes</a>
+                    <a href="galeria.html " class="nav-item nav-link text-light fs-3 fw-bold">Galeria</a>
+                    <a href="reserva.html " class="nav-item nav-link text-light fs-3 fw-bold">Reserva</a>
+                    <a href="contactenos.html " class="nav-item nav-link text-light fs-3 fw-bold">Contactenos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====================================
+   HEADER
+===================================== -->
+    <section class="home-header" id="home-header">
+        <header class="container container-fluid d-flex justify-content-between align-items-center contenedor-header">
+
+            <div>
+                <h1 class="text-center display-4 fw-bold">Hotel El Cerro</h1>
+                <h2 class="text-center fs-3">Hotel de Montaña & Spa</h2>
+            </div>
+            <div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="fs-5 link-success">Eng</a>
+                    <a href="#" class="fs-5 link-success">Esp</a>
+                </div>
+                <a href="index.html" class="btn btn-outline-success fs-4">Volver a Landing</a> </div>
+        </header>
+    </section>
+
+    <section>
+        <div class="bg-image d-flex align-items-end contactenos-background">
+            <div class="container spa-background-contenedor">
+                <p class="container text-white text-center pt-5 mb-5 px-5 py-5">
+                    El descanso que su mente y cuerpo necesitan para iniciar su próxima aventura a solo unos pasos de su habitación.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="p-4 contactenos-section fondo">
+
+        <h5 class="display-2 text-center font-weight-bolder">¿Consultas?</h5>
+        <p class="container text-center pt-5 mb-5 px-5 py-5 fs-3"> Complete los detalles a continuación y luego haga clic en Enviar y nos pondremos en contacto</p>
+
+        <div class="container d-flex justify-content-evenly">
+
+            <div class="container col-lg-6  fs-4">
+
+                <form name="login" method="post">
+
+                    <div class="form-group">
+
+                        <div class="pt-5"></div>
+                        <div class="mb-3">
+                            <label class="form-label fs-2">Nombre</label><br>
+                            <input type="text" name="c1" class="form-control fs-2" id="nombreTXT" size="10" onkeyup="minusculas(this);">
+                            <div class="">Escriba su nombre</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fs-2">Apellido</label><br>
+                            <input type="text" name="c2" class="form-control fs-2" size="10" id="apellidoTXT" onkeyup="minusculas(this);">
+                            <div class="">Escriba su apellido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fs-2">Correo electrónico</label><br>
+                            <input type="email" name="c3" class="form-control fs-2" id="correoTXT" minlength="10" onkeyup="minusculas(this);">
+                            <div class="">Escriba su cuenta de correo (@)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fs-2">Mensaje</label><br>
+                            <textarea class="form-control" name="c4" rows="7" cols="50" id="areaTXT" onkeyup="minusculas(this);"></textarea>
+                            <div class="">Escriba sus comentarios o consultas</div>
+                            <div class="">Escriba su comentario entre 12 y 24 digitos</div>
+                        </div>
+
+
+                        <input type="button" value="Entrar" type="submit" class="btn btn-coral fs-3" onclick="validar_datos()">
+
+                        <div class="pt-5"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container column ">
+
+                <div class="w-100 d-flex flex-wrap align-content-stretch justify-content-center m-5">
+
+                    <div class="col-lg-8 d-flex align-content-around m-2">
+                        <i class="fas fa-phone me-3 fa-4x contactenos-iconos"></i>
+                        <div>
+                            <p class="fs-1">Número de teléfono</p>
+                            <p class="fs-2">(506) 2234-4555</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 d-flex align-content-around m-2">
+                        <i class="fas fa-envelope me-3 fa-4x contactenos-iconos"></i>
+                        <div>
+                            <p class="fs-1">E-mail</p>
+                            <p class="fs-2">info@elcerro.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 d-flex align-content-around m-2">
+                        <i class="fas fa-map-marker-alt me-3 fa-4x contactenos-iconos"></i>
+                        <div>
+                            <p class="fs-1">Dirección</p>
+                            <p class="fs-2">Cerro de la Muerte, PZ</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 d-flex align-content-around m-2">
+
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31474.651954958834!2d-83.7675096304705!3d9.566666061532574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa1374563ae1c91%3A0xa55e07c718b6ac8b!2sCerro%20de%20la%20Muerte!5e0!3m2!1ses-419!2scr!4v1637464173541!5m2!1ses-419!2scr"
+                                width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <!-- ====================================
+   FOOTER
+===================================== -->
+    <footer class="p-4 w-100 pie">
+        <div class="row container container-fluid m-auto">
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center align-items-center p-1">
+                <a href="home.html " class="navbar-brand text-light">
+                    <img src="img/logo.jpg " height="75" alt="Logo">
+                </a>
+                <h3 class="text-center display-6 fw-bold">Hotel El Cerro</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1">
+
+                <ul class="lista-links mb-0">
+                    <li>
+                        <a href="habitaciones.html" class="text-light fs-3 ">Habitaciones</a>
+                    </li>
+                    <li>
+                        <a href="reserva.html " class="text-light fs-3 ">Reserva</a>
+                    </li>
+                    <li>
+                        <a href="contactenos.html " class="text-light fs-3">Contactenos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1">
+                <ul class="lista-links mb-0 ">
+                    <li>
+                        <p class="fs-3"><i class="fas fa-phone me-3 fs-3"></i> (506) 2234-4555</p>
+                    </li>
+                    <li>
+                        <p class="fs-3"><i class="fas fa-envelope me-3 fs-3"></i> info@elcerro.com</p>
+                    </li>
+                    <li>
+                        <p class="fs-3"><i class="fas fa-map-marker-alt me-3 fs-3"></i> Cerro de la Muerte, PZ</p>
+                    </li>
+                    <div class="d-flex justify-content-around">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-3x fa-sm fa-facebook-square footer-iconos"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-3x fa-sm fa-youtube footer-iconos"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-3x fa-sm fa-instagram footer-iconos"></i></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a id="flechabtn" href="#home-header" class="goto-top" title="Ir al inicio" onclick="topFunction()" data-scroll>
+        <i class="fas fa-arrow-circle-up fa-5x scroll-img"></i>
+    </a>
+
+    <!-- Scrolltop archivos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/elastico.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/config.js"></script>
+</body>
+
+</html>

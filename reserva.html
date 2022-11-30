@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Hotel El Cerro | Reserva </title>
+</head>
+
+<body>
+
+    <!-- ====================================
+   NAVBAR
+===================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ps-4 navegacion">
+        <div class="container-fluid">
+            <a href="home.html " class="navbar-brand text-light">
+                <img src="img/logo.jpg " height="75" alt="Logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto navegacion-links">
+                    <a href="habitaciones.html" class="nav-item nav-link active text-light fs-3 fw-bold">Habitaciones</a>
+                    <a href="spa.html " class="nav-item nav-link text-light fs-3 fw-bold">Spa</a>
+                    <a href="paquetes.html " class="nav-item nav-link text-light fs-3 fw-bold">Paquetes</a>
+                    <a href="galeria.html " class="nav-item nav-link text-light fs-3 fw-bold">Galeria</a>
+                    <a href="reserva.html " class="nav-item nav-link text-light fs-3 fw-bold">Reserva</a>
+                    <a href="contactenos.html " class="nav-item nav-link text-light fs-3 fw-bold">Contactenos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====================================
+   HEADER
+===================================== -->
+    <section class="home-header" id="home-header">
+        <header class="container container-fluid d-flex justify-content-between align-items-center contenedor-header">
+
+            <div>
+                <h1 class="text-center display-4 fw-bold">Hotel El Cerro</h1>
+                <h2 class="text-center fs-3">Hotel de Montaña & Spa</h2>
+            </div>
+            <div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="fs-5 link-success">Eng</a>
+                    <a href="#" class="fs-5 link-success">Esp</a>
+                </div>
+                <a href="index.html" class="btn btn-outline-success fs-4">Volver a Landing</a> </div>
+        </header>
+    </section>
+
+    <!-- ====================================
+   RESERVA
+===================================== -->
+    <section class="fondo">
+        <div class="container fs-3">
+            <form class="row">
+                <div class="my-5 col-3">
+                    <label for="entrada" class="form-label">Dia de Entrada</label>
+                    <input type="date" class="form-control fs-3" id="entrada">
+                </div>
+
+                <div class="my-5 col-3">
+                    <label for="opcion" class="form-label">Estancia por</label>
+                    <select class="form-select fs-3" id="reserva_dias">
+                  <option value="1">1 Noche</option>
+                  <option value="2">2 Noches</option>
+                  <option value="3">3 Noches</option>
+                  <option value="4">4 Noches</option>
+                  <option value="5">5 Noches</option>
+                </select>
+                </div>
+
+                <div class="my-5 col-3">
+                    <label for="opcion" class="form-label">Opción Hospedaje</label>
+                    <select class="form-select fs-3" id="reserva_habitacion">
+                      <option selected disabled>Seleccione</option>
+                <option value="1">Habitación Standard</option>
+                <option value="2">Habitación Deluxe</option>
+                <option value="3">Paquete Standard</option>
+                <option value="4">Paquete Premium</option>
+                <option value="5">Paquete Deluxe</option>
+              </select>
+                </div>
+
+                <div class="my-5 ms-1 col-3 row">
+                    <label for="opcion" class="form-label">Selecione</label>
+                    <input type="button" class="btn mb-3 col-6 fs-3 btn-coral" value="Buscar" onclick="buscar()">
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <div class="reserva-divisor"></div>
+
+    <section class="fondo">
+        <div class=" container row container-fluid m-auto justify-content-between p-4 ">
+            <div class="col-lg-8  col-md-4 col-sm-12 text-center ">
+                <div id="resultado" class="resultado img-fluid"></div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center align-self-start pt-5 fs-2">
+                <p id="descripcion" class="text-left"></p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ====================================
+   FOOTER
+===================================== -->
+    <footer class="p-4 w-100 pie">
+        <div class="row container container-fluid m-auto">
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center align-items-center p-1">
+                <a href="home.html " class="navbar-brand text-light">
+                    <img src="img/logo.jpg " height="75" alt="Logo">
+                </a>
+                <h3 class="text-center display-6 fw-bold">Hotel El Cerro</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1">
+
+                <ul class="lista-links mb-0">
+                    <li>
+                        <a href="habitaciones.html" class="text-light fs-3 ">Habitaciones</a>
+                    </li>
+                    <li>
+                        <a href="reserva.html " class="text-light fs-3 ">Reserva</a>
+                    </li>
+                    <li>
+                        <a href="contactenos.html " class="text-light fs-3">Contactenos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1">
+                <ul class="lista-links mb-0 ">
+                    <li>
+                        <p class="fs-3"><i class="fas fa-phone me-3 fs-3"></i> (506) 2234-4555</p>
+                    </li>
+                    <li>
+                        <p class="fs-3"><i class="fas fa-envelope me-3 fs-3"></i> info@elcerro.com</p>
+                    </li>
+                    <li>
+                        <p class="fs-3"><i class="fas fa-map-marker-alt me-3 fs-3"></i> Cerro de la Muerte, PZ</p>
+                    </li>
+                    <div class="d-flex justify-content-around">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-3x fa-sm fa-facebook-square footer-iconos"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-3x fa-sm fa-youtube footer-iconos"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-3x fa-sm fa-instagram footer-iconos"></i></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a id="flechabtn" href="#home-header" class="goto-top" title="Ir al inicio" onclick="topFunction()" data-scroll>
+        <i class="fas fa-arrow-circle-up fa-5x scroll-img"></i>
+    </a>
+
+    <!-- Scrolltop archivos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/elastico.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="js/reserva.js"></script>
+</body>
+
+</html>

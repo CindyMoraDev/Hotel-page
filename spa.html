@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hotel El Cerro | Spa</title>
+</head>
+
+<body>
+
+    <!-- ====================================
+   NAVBAR
+===================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ps-4 navegacion">
+        <div class="container-fluid">
+            <a href="home.html " class="navbar-brand text-light">
+                <img src="img/logo.jpg " height="75" alt="Logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto navegacion-links">
+                    <a href="habitaciones.html" class="nav-item nav-link active text-light fs-3 fw-bold">Habitaciones</a>
+                    <a href="spa.html " class="nav-item nav-link text-light fs-3 fw-bold">Spa</a>
+                    <a href="paquetes.html " class="nav-item nav-link text-light fs-3 fw-bold">Paquetes</a>
+                    <a href="galeria.html " class="nav-item nav-link text-light fs-3 fw-bold">Galeria</a>
+                    <a href="reserva.html " class="nav-item nav-link text-light fs-3 fw-bold">Reserva</a>
+                    <a href="contactenos.html " class="nav-item nav-link text-light fs-3 fw-bold">Contactenos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====================================
+   HEADER
+===================================== -->
+    <section class="home-header" id="home-header">
+        <header class="container container-fluid d-flex justify-content-between align-items-center contenedor-header">
+
+            <div>
+                <h1 class="text-center display-4 fw-bold">Hotel El Cerro</h1>
+                <h2 class="text-center fs-3">Hotel de Montaña & Spa</h2>
+            </div>
+            <div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="fs-5 link-success">Eng</a>
+                    <a href="#" class="fs-5 link-success">Esp</a>
+                </div>
+                <a href="index.html" class="btn btn-outline-success fs-4">Volver a Landing</a> </div>
+        </header>
+    </section>
+
+    <section>
+        <div class="bg-image d-flex align-items-end spa-background">
+            <div class="container spa-background-contenedor">
+                <p class="container text-white text-center pt-5 mb-5 px-5 py-5">
+                    El descanso que su mente y cuerpo necesitan para iniciar su próxima aventura a solo unos pasos de su habitación.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class=" fondo">
+        <div class="container p-5 ">
+            <h5 class="display-2 text-center font-weight-bolder text-dark">Spa El Cerro</h5>
+            <p class=" text-dark spa-descripcion-txt">Creemos que la clave para la mejora y el mantenimiento del bienestar general es la eliminación del estrés y la tensión. Trabajamos para mejorar la calidad de vida a través del rejuvenecimiento físico y mental. Nuestro personal altamente capacitado
+                brinda tratamientos, diseñados para satisfacer el rostro y todo el cuerpo. Nuestro objetivo continuo es superar las expectativas de nuestros clientes individuales con un servicio profesional práctico.</p>
+        </div>
+    </section>
+
+    <section class="spa-descripcion">
+        <div class="container text-center p-5 text-light ">
+            <h1 class="display-4  fw-bold">Explora nuestros tratamientos</h1>
+            <div class="pt-5"></div>
+
+            <form class="txt-radios fs-2">
+                <input type="radio" id="radio1" name="r" class="cursor form-check-input"> Tratamientos faciales
+                <span class="p-5"></span>
+                <input type="radio" id="radio2" name="r" class="cursor form-check-input"> Tratamientos corporales
+                <div class="pt-5 "></div>
+                <input type="button" class="btn btn-coral fs-4 p-3" value="Mostrar" onclick="mostrar()">
+            </form>
+        </div>
+    </section>
+
+    <section class="fondo">
+        <div class="container d-flex justify-content-between pt-5 pb-5 ">
+            <img class="col-lg-3 " src="img/spa3.jpg " />
+            <img class="col-lg-3 " src="img/spa4.jpg " />
+            <img class="col-lg-3 " src="img/spa5.jpg " />
+        </div>
+    </section>
+
+    <section class="fondo">
+        <div class="container text-center ">
+            <h1 class="display-4 fw-bold ">Reseñas</h1>
+            <div class="pt-5 "></div>
+
+            <div class="text-left ">
+                <h3 class=" text-left ">Seleccione a continuación:</h3>
+            </div>
+
+            <div class="tab tam1 mt-5 ">
+                <button class="tablinks " onclick="opciones(event, 'historia') ">Andrés C</button>
+                <button class="tablinks " onclick="opciones(event, 'mision') ">Carlos L</button>
+                <button class="tablinks " onclick="opciones(event, 'vision') ">Vida P</button>
+            </div>
+            <div id="historia " class="tabcontent ">
+                <p class="txt-tab ">
+                    He viajado y visitado muchos centros de Spa y esta fue de lejos la mejor experiencia. Las instalaciones son increibles y los servicios de masajes y relajación superaron mis espectativas. El servicio al cliente y la atención fue personalizada y el personal
+                    super atento... Definitavente recomendado y volvere!
+                </p>
+                <img src="img/spa6.jpg " alt="historia " class="img-fluid ">
+            </div>
+
+            <div id="mision " class="tabcontent ">
+                <p class="text-left txt-tab ">
+                    Excelente servicio. Un lugar perfecto para relajarte. El trato es de primera. Fue el complemento perfecto en mis vacaciones. Fuimos en grupo y nos atendieron a todos de la mejor manera.
+                </p>
+                <img src="img/spa7.jpg " alt="mision " class="img-fluid ">
+            </div>
+
+            <div id="vision " class="tabcontent ">
+                <p class="text-left txt-tab ">
+                    Me encanta! Mi esposo y yo siempre que podemos vamos! Es una maravilla sale uno como nuevo!
+                </p>
+                <img src="img/spa8.jpg " alt="vision " class="img-fluid ">
+            </div>
+        </div>
+    </section>
+
+    <div class="pt-5 "></div>
+    <div class="pt-5 "></div>
+
+    </main>
+
+
+
+    <!-- ====================================
+   FOOTER
+===================================== -->
+    <footer class="p-4 w-100 pie ">
+        <div class="row container container-fluid m-auto ">
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center align-items-center p-1 ">
+                <a href="home.html " class="navbar-brand text-light ">
+                    <img src="img/logo.jpg " height="75 " alt="Logo ">
+                </a>
+                <h3 class="text-center display-6 fw-bold ">Hotel El Cerro</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1 ">
+
+                <ul class="lista-links mb-0 ">
+                    <li>
+                        <a href="habitaciones.html " class="text-light fs-3 ">Habitaciones</a>
+                    </li>
+                    <li>
+                        <a href="reserva.html " class="text-light fs-3 ">Reserva</a>
+                    </li>
+                    <li>
+                        <a href="contactenos.html " class="text-light fs-3 ">Contactenos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-1 ">
+                <ul class="lista-links mb-0 ">
+                    <li>
+                        <p class="fs-3 "><i class="fas fa-phone me-3 fs-3 "></i> (506) 2234-4555</p>
+                    </li>
+                    <li>
+                        <p class="fs-3 "><i class="fas fa-envelope me-3 fs-3 "></i> info@elcerro.com</p>
+                    </li>
+                    <li>
+                        <p class="fs-3 "><i class="fas fa-map-marker-alt me-3 fs-3 "></i> Cerro de la Muerte, PZ</p>
+                    </li>
+                    <div class="d-flex justify-content-around ">
+                        <a href="https://www.facebook.com/ " target="_blank "><i class="fab fa-3x fa-sm fa-facebook-square footer-iconos "></i></a>
+                        <a href="https://www.youtube.com/ " target="_blank "><i class="fab fa-3x fa-sm fa-youtube footer-iconos "></i></a>
+                        <a href="https://www.youtube.com/ " target="_blank "><i class="fab fa-3x fa-sm fa-instagram footer-iconos "></i></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <a id="flechabtn " href="#home-header " class="goto-top " title="Ir al inicio " onclick="topFunction() " data-scroll>
+        <i class="fas fa-arrow-circle-up fa-5x scroll-img "></i>
+    </a>
+
+    <!-- Scrolltop archivos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="js/smooth-scroll.min.js "></script>
+    <script src="js/elastico.js "></script>
+
+    <!-- Tabs    -->
+    <script src="js/tabs.js "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/config.js"></script>
+
+</body>
+
+</html>

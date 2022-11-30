@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <title>Hotel El Cerro | App </title>
+</head>
+
+<body>
+
+    <!-- ====================================
+   HEADER
+===================================== -->
+    <section class="home-header" id="home-header">
+        <header class="container container-fluid d-flex justify-content-between align-items-center contenedor-header">
+
+            <a href="home.html " class="navbar-brand text-light">
+                <img src="img/logo.jpg " height="75" alt="Logo">
+            </a>
+
+            <div>
+                <h1 class="text-center display-4 fw-bold">Hotel El Cerro</h1>
+                <h2 class="text-center fs-3">Hotel de Montaña & Spa</h2>
+            </div>
+            <div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="fs-5 link-success">Eng</a>
+                    <a href="#" class="fs-5 link-success">Esp</a>
+                </div>
+                <a href="index.html" class="btn btn-outline-success fs-4">Volver a Landing</a> </div>
+        </header>
+    </section>
+
+
+    <!-- interfaz visual -->
+    <section class="container text-center">
+        <h1 class="display-4 pt-5 fw-bold">Histórico Hospedaje</h1>
+
+        <div class="pt-5"></div>
+        <div class="d-flex justify-content-center">
+            <h4 class="fs-3 text-dark">Cliente:</h4>
+            <!-- quemado de datos de 10 registros en un combo select -->
+            <select id="proveedoresSlt" class="btn btn-light fs-3">
+	                <option class="fs-4" value="1">Juan Bolaños</option>
+	                <option class="fs-4" value="2">Pedro Ureña</option>
+	                <option class="fs-4" value="3">Diego Jiménez</option>
+	                <option class="fs-4" value="4">Matias Rodriguez</option>
+	                <option class="fs-4" value="5">Jorge Ureña</option>
+	                <option class="fs-4" value="6">Carlos Obando</option>
+	                <option class="fs-4" value="7">Marco Ureña</option>
+	                <option class="fs-4" value="8">Jasus Trejos</option>
+	                <option class="fs-4" value="9">Mario Ureña</option>
+	                <option class="fs-4" value="10">Patricia Ortiz</option>
+                    <option class="fs-4" value="11">Bo Ritchie</option>
+                    <option class="fs-4" value="12">Kaycee Block</option>
+                    <option class="fs-4" value="13">Frederic Wuckert</option>
+                    <option class="fs-4" value="14">Fannie Abbott</option>
+                    <option class="fs-4" value="15">Marlene Bergnaum</option>
+            	</select>
+        </div>
+        <div class="pt-5"></div>
+        <!--campo donde se digita la cantidad del producto -->
+        <label for="cantFresasTxt" class="text-dark fs-3">Cantidad de Noches: </label>
+        <input id="cantFresasTxt" class="fs-3" type="number">
+
+        <div class="pt-5"></div>
+        <div class="d-flex justify-content-center">
+            <h4 class="fs-3 text-dark">Opción Hospedaje: </h4>
+            <select class="btn btn-light fs-3" id="reserva_habitacion">
+                <option value="1">Habitación Standard</option>
+                <option value="2">Habitación Deluxe</option>
+                <option value="3">Paquete Standard</option>
+                <option value="4">Paquete Premium</option>
+                <option value="5">Paquete Deluxe</option>
+              </select>
+        </div>
+        <div class="pt-5"></div>
+
+
+        <!-- botones informes -->
+        <input type="button" class="btn  col-1 fs-3 btn-coral" value="Registrar" id="registrarBtn"><br><br>
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" id="totalFresasBtn" value="Total">
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" value="Mayor" id="mayorProductorBtn">
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" value="Menor" id="menorProductorBtn">
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" value="Descuento" id="pagoBtn">
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" value="Restablecer" id="restablecerBtn">
+
+        <!-- Recarga la aplicación web -->
+        <input type="button" class="btn mb-3 col-1 fs-3 btn-coral" value="Iniciar" onclick="location.reload()">
+
+
+
+
+        <!-- creacion de la tabla -->
+        <div class="row">
+            <div class="container">
+                <table class="table" id="tabla"></table>
+            </div>
+            <p id="resultadoPr" class="fs-3"></p>
+        </div>
+
+    </section>
+
+
+
+
+
+    <a id="flechabtn" href="#home-header" class="goto-top" title="Ir al inicio" onclick="topFunction()" data-scroll>
+        <i class="fas fa-arrow-circle-up fa-5x scroll-img"></i>
+    </a>
+
+
+    <script src="js/apps.js"></script>
+    <!-- Scrolltop archivos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/elastico.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
